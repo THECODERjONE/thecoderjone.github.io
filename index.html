@@ -3,7 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Control</title>
+    <title>Hire Him</title>
+    <style>
+    body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #popup {
+            display: none;
+            text-align: center;
+        }
+
+        .rainbow-text {
+            font-size: 72px;
+            background: linear-gradient(135deg, rgba(126, 0, 0, 0.637), rgba(255, 208, 0, 0.836), rgb(0, 51, 161));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -40,7 +63,7 @@
             checkCount++;
             if (checkCount >= 10) {
                 checkCount = 0; // Reset the count.
-                const shouldBeHired = confirm("Should the hiring status be set to 'true'?");
+                const shouldBeHired = confirm("Should THECODERjONE be hired?");
                 if (shouldBeHired) {
                     setHiredManually();
                 }
@@ -91,7 +114,11 @@
 
         // Function to display the modified message when 'isHired' is true.
         function displayMessage() {
-            document.body.innerHTML = document.body.innerHTML += '<div style="font-size: 72px; font-weight: bold; text-transform: uppercase; text-align: center; padding: 10px; color: #8B0000; text-shadow: -1px -1px 0 #000, 1px 1px 0 #fff; background-image: linear-gradient(to bottom, #000000 50%, #ffffff 50%); -webkit-background-clip: text;">Best worker acquired</div>';
+            const rainbowText = document.createElement('div');
+            rainbowText.classList.add('rainbow-text');
+            rainbowText.textContent = 'Best worker acquired';
+            document.body.innerHTML = '';
+            document.body.appendChild(rainbowText);
             messageDisplayed = true; // Update the flag to indicate that the message has been displayed.
         }
     </script>
