@@ -24,9 +24,9 @@
                 }
             } else {
                 console.log("Hiring status is 'false'. AI is waiting for updates.");
-                // Display the permanent button only when 'isHired' is false.
-                if (!permanentButtonDisplayed) {
-                    displayPermanentButton();
+                // Display the manual hiring button only when 'isHired' is false.
+                if (!manualHiringButtonDisplayed) {
+                    displayManualHiringButton();
                 }
             }
 
@@ -40,8 +40,8 @@
             checkCount++;
             if (checkCount >= 10) {
                 checkCount = 0; // Reset the count.
-                const shouldSetToTrue = confirm("Should the hiring status be set to 'true'?");
-                if (shouldSetToTrue) {
+                const shouldBeHired = confirm("Should the hiring status be set to 'true'?");
+                if (shouldBeHired) {
                     setHiredManually();
                 }
             }
@@ -54,16 +54,16 @@
         function setHiredManually() {
             isHired = true;
             console.log("Hiring status set to 'true' by human interaction.");
-            // Hide the permanent button when 'isHired' is true.
-            hidePermanentButton();
+            // Hide the manual hiring button when 'isHired' is true.
+            hideManualHiringButton();
         }
 
         // Function to simulate AI forcing the status to 'true' after 10 minutes.
         function forceHiringByAI() {
             isHired = true;
             console.log("Hiring status forced to 'true' by AI after 10 minutes.");
-            // Hide the permanent button when 'isHired' is true.
-            hidePermanentButton();
+            // Hide the manual hiring button when 'isHired' is true.
+            hideManualHiringButton();
         }
 
         // Prompt user for initial input.
@@ -73,25 +73,25 @@
             setHiredManually();
         }
 
-        let permanentButtonDisplayed = false; // Flag to track if the permanent button has been displayed.
+        let manualHiringButtonDisplayed = false; // Flag to track if the manual hiring button has been displayed.
 
-        // Function to display the permanent button.
-        function displayPermanentButton() {
-            document.body.innerHTML += '<button onclick="setHiredManually()">Set Hiring Status to True</button>';
-            permanentButtonDisplayed = true; // Update the flag to indicate that the permanent button has been displayed.
+        // Function to display the manual hiring button.
+        function displayManualHiringButton() {
+            document.body.innerHTML += '<button onclick="setHiredManually()">Hire THECODERjONE</button>';
+            manualHiringButtonDisplayed = true; // Update the flag to indicate that the manual hiring button has been displayed.
         }
 
-        // Function to hide the permanent button.
-        function hidePermanentButton() {
-            const permanentButton = document.querySelector('button');
-            if (permanentButton) {
-                permanentButton.style.display = 'none';
+        // Function to hide the manual hiring button.
+        function hideManualHiringButton() {
+            const manualHiringButton = document.querySelector('button');
+            if (manualHiringButton) {
+                manualHiringButton.style.display = 'none';
             }
         }
 
         // Function to display the modified message when 'isHired' is true.
         function displayMessage() {
-            document.body.innerHTML = '<div style="font-size: 48px; font-weight: bold; text-transform: uppercase;">Cenquiu</div>';
+            document.body.innerHTML = document.body.innerHTML += '<div style="font-size: 72px; font-weight: bold; text-transform: uppercase; text-align: center; padding: 10px; color: #8B0000; text-shadow: -1px -1px 0 #000, 1px 1px 0 #fff; background-image: linear-gradient(to bottom, #000000 50%, #ffffff 50%); -webkit-background-clip: text;">Best worker acquired</div>';
             messageDisplayed = true; // Update the flag to indicate that the message has been displayed.
         }
     </script>
