@@ -36,7 +36,7 @@ h1 {
 }
 
 main {
-    padding-top: 25px;
+    padding-top: 50px;
 }
 
 nav {
@@ -48,6 +48,11 @@ nav {
 nav > ul {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
 }
 
 h1, h2 {
@@ -56,7 +61,7 @@ h1, h2 {
 
 h2 {
     border-bottom: 4px solid #dfdfe2;
-    margin: 0;
+    margin-top: 0;
     padding-top: 60px;
 }
 
@@ -81,7 +86,6 @@ nav > ul > li {
     margin: 0 0.2rem;
     padding: 0.2rem;
     display: block;
-
 }
 
 li > a {
@@ -95,16 +99,6 @@ nav > ul > li:hover {
     cursor: pointer;
 }
 
-nav > ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-inline-start: 0;
-    margin-block: 0;
-    height: 100%;
-    flex-wrap: wrap;
-}
-
 section {
     width: 80%;
     max-width: 600px;
@@ -112,12 +106,12 @@ section {
 }
 
 .info {
-    padding: 1px 0 0 1px;
+    padding: 5px 0 0 5px;
 }
 
 .formrow {
-    margin-top: 5px;
-    padding: 0 5px 0 5px;
+    margin-top: 20px;
+    padding: 0 10px 0 10px;
 }
 
 input {
@@ -149,8 +143,8 @@ input {
 
 p {
     margin-top: 5px;
-padding-left: 15px;
-font-size: 20px;
+    padding-left: 15px;
+    font-size: 20px;
 }
 
 .question {
@@ -185,6 +179,5 @@ footer, footer a {
 
 address {
     text-align: center;
-    padding: 1px;
+    padding: 0.3em;
 }
-
