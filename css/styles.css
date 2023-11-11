@@ -241,10 +241,6 @@ img {
     border-radius: 2px;
 }
 
-.fa-linkedin {
-    size: 48px 48px;
-}
-
 .icon-show-all {
     font-size: 2rem;
     background: var(--mainGray);
